@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Shivam",
+        "dob": "19-11-2007",
+        "favorite_artist": "MLizzy",
+        "favorite_genre": "Black",
+        "playlists": [
+            {
+                "name": "Bhes",
+                "songs": [
+                    {
+                        "name": "Anglo Saxon",
+                        "artist": "Loski",
+                        "genre": "Drill",
+                        "length": "250"
+                    },
+                    {
+                        "name": "Wonderwall",
+                        "artist": "Oasis",
+                        "genre": "Rock",
+                        "length": "242"
+                    }
+                ]
+            },
+            {
+                "name": "New",
+                "songs": [
+                    {
+                        "name": "Wonderwall",
+                        "artist": "Oasis",
+                        "genre": "Rock",
+                        "length": "242"
+                    },
+                    {
+                        "name": "Thriller",
+                        "artist": "Michael Jackson",
+                        "genre": "Pop",
+                        "length": "239"
+                    },
+                    {
+                        "name": "We Found Love",
+                        "artist": "Rihanna ft. Calvin Harris",
+                        "genre": "Pop",
+                        "length": "225"
+                    },
+                    {
+                        "name": "Uptown Funk",
+                        "artist": "Mark Ronson ft. Bruno Mars",
+                        "genre": "Funk",
+                        "length": "272"
+                    },
+                    {
+                        "name": "Titanium",
+                        "artist": "David Guetta ft. Sia",
+                        "genre": "Electronic",
+                        "length": "237"
+                    }
+                ]
+            }
+        ]
+    }
+]
