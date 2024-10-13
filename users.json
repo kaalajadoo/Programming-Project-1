@@ -58,5 +58,12 @@
                 ]
             }
         ]
+    },
+    {
+        "name": "Ruturaj",
+        "dob": "2007-09-3",
+        "favorite_artist": "Taylor Swift",
+        "favorite_genre": "Anthems",
+        "playlists": []
     }
 ]
