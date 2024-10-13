@@ -3,11 +3,9 @@ import random
 
 # Function to load data from JSON files
 def load_data(file_name):
-    try:
-        with open(file_name, 'r') as file:
-            return json.load(file)
-    except FileNotFoundError:
-        return []
+    with open(file_name, 'r') as file:
+        return json.load(file)
+
 
 # Function to save data to JSON files
 def save_data(file_name, data):
@@ -19,7 +17,7 @@ def display_songs():
     songs = load_data('songs.json')
     songs_sorted = sorted(songs, key=lambda x: x['name'])
     for song in songs_sorted:
-        print(f"name: {song['name']}, Artist: {song['artist']}, Length: {song['length']} minutes")
+        print(f"name: {song['name']}, Artist: {song['artist']}, Length: {song['length']} seconds")
 
 # 2. Create a user account
 def create_account():
@@ -108,7 +106,7 @@ def view_playlists():
                 for playlist in user['playlists']:
                     print(f"\nPlaylist: {playlist['name']}")
                     for song in playlist['songs']:
-                        print(f" - {song['name']} by {song['artist']} ({song['length']} minutes)")
+                        print(f" - {song['name']} by {song['artist']} ({song['length']} seconds)")
             else:
                 print("No playlists found.")
             return
@@ -146,7 +144,7 @@ def generate_playlist_by_genre():
         playlist = random.sample(genre_songs, min(5, len(genre_songs)))
         print(f"Generated Playlist for {genre} genre:")
         for song in playlist:
-            print(f"{song['name']} by {song['artist']} ({song['length']} minutes)")
+            print(f"{song['name']} by {song['artist']} ({song['length']} seconds)")
     else:
         print("No songs found for that genre.")
 
@@ -160,7 +158,7 @@ def save_songs_by_artist():
     if artist_songs:
         with open(f"{artist}_songs.txt", "w") as file:
             for song in artist_songs:
-                file.write(f"{song['name']} ({song['length']} minutes)\n")
+                file.write(f"{song['name']} ({song['length']} seconds)\n")
                 
         print(f"Songs by {artist} saved to {artist}_songs.txt")
     else:
