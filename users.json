@@ -65,5 +65,113 @@
         "favorite_artist": "Taylor Swift",
         "favorite_genre": "Anthems",
         "playlists": []
+    },
+    {
+        "name": "P Filly",
+        "dob": "1995-08-06",
+        "favorite_artist": "P Diddy",
+        "favorite_genre": "Rap",
+        "playlists": [
+            {
+                "name": " Some Charges",
+                "songs": [
+                    {
+                        "name": "Let Her Go",
+                        "artist": "Passenger",
+                        "genre": "Folk",
+                        "length": "239"
+                    },
+                    {
+                        "name": "Lose Yourself",
+                        "artist": "Eminem",
+                        "genre": "Hip Hop",
+                        "length": "255"
+                    },
+                    {
+                        "name": "Dog Eat Dog",
+                        "artist": "AC/DC",
+                        "genre": "Rock",
+                        "length": "214"
+                    },
+                    {
+                        "name": "We Found Love",
+                        "artist": "Rihanna ft. Calvin Harris",
+                        "genre": "Pop",
+                        "length": "225"
+                    }
+                ]
+            },
+            {
+                "name": "Diddler or Fiddler",
+                "songs": [
+                    {
+                        "name": "Stronger (What Doesn't Kill You)",
+                        "artist": "Kelly Clarkson",
+                        "genre": "Pop",
+                        "length": "232"
+                    },
+                    {
+                        "name": "Thriller",
+                        "artist": "Michael Jackson",
+                        "genre": "Pop",
+                        "length": "239"
+                    },
+                    {
+                        "name": "We Found Love",
+                        "artist": "Rihanna ft. Calvin Harris",
+                        "genre": "Pop",
+                        "length": "225"
+                    },
+                    {
+                        "name": "Shape of You",
+                        "artist": "Ed Sheeran",
+                        "genre": "Pop",
+                        "length": "235"
+                    },
+                    {
+                        "name": "Smooth",
+                        "artist": "Santana ft. Rob Thomas",
+                        "genre": "Latin",
+                        "length": "235"
+                    },
+                    {
+                        "name": "Someone Like You",
+                        "artist": "Adele",
+                        "genre": "Pop",
+                        "length": "247"
+                    },
+                    {
+                        "name": "Shake It Off",
+                        "artist": "Taylor Swift",
+                        "genre": "Pop",
+                        "length": "226"
+                    },
+                    {
+                        "name": "Lose Yourself",
+                        "artist": "Eminem",
+                        "genre": "Hip Hop",
+                        "length": "255"
+                    },
+                    {
+                        "name": "Let Her Go",
+                        "artist": "Passenger",
+                        "genre": "Folk",
+                        "length": "239"
+                    },
+                    {
+                        "name": "I Gotta Feeling",
+                        "artist": "The Black Eyed Peas",
+                        "genre": "Pop",
+                        "length": "231"
+                    },
+                    {
+                        "name": "Bad Romance",
+                        "artist": "Lady Gaga",
+                        "genre": "Pop",
+                        "length": "248"
+                    }
+                ]
+            }
+        ]
     }
 ]
