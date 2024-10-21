@@ -10,7 +10,7 @@ def load_data(file_name):
 # Function to save data to JSON files
 def save_data(file_name, data):
     with open(file_name, 'w') as file:
-        json.dump(data, file, indent=4)
+        json.dump(data, file, indent=4) #the indent = 4 is for formatting of the JSON file to look cleaner
 
 # 1. Display songs in alphabetical order
 def display_songs():
@@ -21,11 +21,11 @@ def display_songs():
 
 # 2. Create a user account
 def create_account():
-    users = load_data('users.json')
+    users = load_data('users.json') #calls function load_data of the file(as an array)
     name = input("Enter your name: ")
-    dob = input("Enter your date of birth (YYYY-MM-DD): ")
-    fav_artist = input("Enter your favorite artist: ")
-    fav_genre = input("Enter your favorite genre: ")
+    dob = input("Enter your date of birth (YYYY-MM-DD): ") #including this as it's standard
+    fav_artist = input("Enter your favorite artist: ") #part of requirement
+    fav_genre = input("Enter your favorite genre: ") #part of requirement
 
     user = {
         "name": name,
@@ -33,9 +33,9 @@ def create_account():
         "favorite_artist": fav_artist,
         "favorite_genre": fav_genre,
         "playlists": []
-    }
-    users.append(user)
-    save_data('users.json', users)
+    } #usage of dictionary that will get appended into the array, key value pairs are consistent
+    users.append(user) #adds the new user to the back of the list
+    save_data('users.json', users)  #calls function save_data and and writes it into the JSON file
     print(f"Account created for {name}!")
 
 # 3. Edit favorite artist and favorite genre
@@ -60,29 +60,29 @@ def edit_user():
 
 # 4. Create, save, and view playlists
 def create_playlist():
-    users = load_data('users.json')
-    songs = load_data('songs.json')
+    users = load_data('users.json') #loads all of the user data
+    songs = load_data('songs.json') #loads song with all the information
 
     name = input("Enter your name: ")
-    for user in users:
-        if user['name'] == name:
+    for user in users: #this line iterates over each dictionary in "users"
+        if user['name'] == name: #checks the key called name
             playlist_name = input("Enter the name of the playlist: ")
-            playlist = []
+            playlist = [] #playlist blank to start with
 
             while True:
-                display_songs()
-                song_name = input("Enter the name of the song to add (or 'done' to finish): ").strip()
+                display_songs() #calls the subroutine that displays all 30 of the songs
+                song_name = input("Enter the name of the song to add (or 'done' to finish): ")
 
-                if song_name.lower() == 'done':
-                    break
+                if song_name.lower() == 'done': #checks if the user has finished with adding songs
+                    break #quits the while loop
 
-                song = next((s for s in songs if s['name'].lower() == song_name.lower()), None)
-                if song:
+                song = next((s for s in songs if s['name'].lower() == song_name.lower()), None) #checks if a match is found and returns None in case of no match
+                if song: #if matching song is found then it is appended to the playlist
                     playlist.append(song)
                 else:
                     print("Song not found. Please try again.")
 
-            if playlist:
+            if playlist: #checks playlist is not empty and if so it is saved as an array against the key "playlists"
                 user['playlists'].append({
                     "name": playlist_name,
                     "songs": playlist
@@ -90,7 +90,7 @@ def create_playlist():
                 save_data('users.json', users)
                 print(f"Playlist '{playlist_name}' created and saved!")
             else:
-                print("No songs in playlist, operation canceled.")
+                print("No songs in playlist.") #only returns this if playlist is blank
             return
 
     print(f"No user found with name {name}.")
@@ -112,20 +112,20 @@ def view_playlists():
             return
 
     print(f"No user found with name {name}.")
-
+#5a give playslists by time
 def generate_playlist_by_time():
   time_limit = int(input("Enter the time limit in seconds: "))  # Get time limit as integer
-  songs = load_data('songs.json')
-  playlist = []
+  songs = load_data('songs.json') #loads all song data
+  playlist = [] #blank playlist
   total_time = 0
 
-  for song in songs:
+  for song in songs: #iterates over each dict in songs
       song_length = int(song['length'])  # Convert song length to integer
-      if total_time + song_length <= time_limit:
+      if total_time + song_length <= time_limit: #not fully random but does not ask to be
           playlist.append(song)
           total_time += song_length
 
-  if playlist:
+  if playlist: #provided playlist is not blank
       print("\nGenerated Playlist:")
       for song in playlist:
           print(f"Title: {song['name']}, Artist: {song['artist']}, Length: {song['length']} seconds")

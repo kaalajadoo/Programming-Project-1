@@ -173,5 +173,12 @@
                 ]
             }
         ]
+    },
+    {
+        "name": "Poozair",
+        "dob": "4200-11-01",
+        "favorite_artist": "P Diddy",
+        "favorite_genre": "Rap",
+        "playlists": []
     }
 ]
