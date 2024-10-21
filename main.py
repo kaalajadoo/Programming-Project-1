@@ -219,7 +219,7 @@ def main():
         elif choice == '9':
             display_genres_average_length()
         elif choice == '10':
-            print("Exiting OCRtunes. Goodbye!")
+            print("Safe")
             break
         else:
             print("Invalid choice. Please try again.")
